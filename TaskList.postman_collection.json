@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "32d58fa3-1c67-4355-b14c-30a7718ce089",
+		"name": "TaskList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "LoginUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"sermendiarias@gmail.com\",\n\t\"password\": \"QWERTY123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8089/tasklist/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tasklist",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "createTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c3VhcmlvMkBnbWFpbC5jb20iLCJleHAiOjE1ODA2OTE1NjEsImlhdCI6MTU4MDY5MDk2MX0.f6RKykxjCAHF9ZcWGLTD_wbk8GFMqbVj2bSZ6Qn0wygMDYjGukBT8ZABrFZyfApzBRA-sL0FRFZ7ZVzLheS2ww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\":\"usuario1@gmail.com\",\n\t\"task\":{\n\t\t\"description\":\"Create all the files and sort it by the number\",\n\t\t\"estimatedDateOfCompletion\":\"2020/06/\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8089/tasklist/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tasklist",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c3VhcmlvMkBnbWFpbC5jb20iLCJleHAiOjE1ODA2OTE1NjEsImlhdCI6MTU4MDY5MDk2MX0.f6RKykxjCAHF9ZcWGLTD_wbk8GFMqbVj2bSZ6Qn0wygMDYjGukBT8ZABrFZyfApzBRA-sL0FRFZ7ZVzLheS2ww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\":\"usuario1@gmail.com\",\n\t\"id\":\"762cc83a-1247-4f18-b10e-4ae1441e01f1\",\n\t\"state\":\"PENDING\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8089/tasklist/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tasklist",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTasksByUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c3VhcmlvMkBnbWFpbC5jb20iLCJleHAiOjE1ODA2OTE1NjEsImlhdCI6MTU4MDY5MDk2MX0.f6RKykxjCAHF9ZcWGLTD_wbk8GFMqbVj2bSZ6Qn0wygMDYjGukBT8ZABrFZyfApzBRA-sL0FRFZ7ZVzLheS2ww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8089/tasklist/task/userId/usuario1@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tasklist",
+								"task",
+								"userId",
+								"usuario1@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
