@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: dev
+name: task-list
+server:
+  port: 8089
+  servlet:
+    contextPath: /tasklist
+jwt:
+  secret: MyPersonalSecurityGenerator
+
+---
+
+spring:
+  profiles: dev
+auth:
+  validate: false
+
+---
+
+spring:
+  profiles: test
+auth:
+  validate: true

@@ -1,0 +1,9 @@
+{
+  "users":[{
+    "userId":"usuario1@gmail.com",
+    "password":"$2a$11$/ZzigPFQPSEZThJGh.ctruMghO0gg0DaAH7yzqfTjyoMkWGCx0mgW"
+  },{
+    "userId":"usuario2@gmail.com",
+    "password":"$2a$11$/ZzigPFQPSEZThJGh.ctruMghO0gg0DaAH7yzqfTjyoMkWGCx0mgW"
+  }]
+}
