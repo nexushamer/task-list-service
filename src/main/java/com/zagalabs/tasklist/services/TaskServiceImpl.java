@@ -23,7 +23,7 @@ import static org.apache.commons.lang3.StringUtils.isBlank;
 @Service
 public class TaskServiceImpl implements TaskService {
     private final TaskRepository taskRepository;
-    private static final String DATE_FORMAT = "yyyy/MM/dd HH:mm:ss";
+    private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     @Autowired
     public TaskServiceImpl(TaskRepository taskRepository) {

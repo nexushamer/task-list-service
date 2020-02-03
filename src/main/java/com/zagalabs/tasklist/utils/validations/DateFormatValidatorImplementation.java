@@ -9,7 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class DateFormatValidatorImplementation implements ConstraintValidator<DateFormatValidator, String> {
-    private static final String DATE_FORMAT = "yyyy/MM/dd HH:mm:ss";
+    private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     @Override
     public boolean isValid(String date, ConstraintValidatorContext constraintValidatorContext) {

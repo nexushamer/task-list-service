@@ -9,7 +9,7 @@ REQUIREMENTS
 TESTING THE SERVICE
 
 - With Maven and the Spring Boot Command
-  The service can be start with the command mvn spring-boot:run, the default port is 8089.
+  The service can be start with the command 'mvn spring-boot:run', the default port is 8089.
 
 - With Maven and the run class
   The service can be start executing the principal class of the application, execute with any IDE of
